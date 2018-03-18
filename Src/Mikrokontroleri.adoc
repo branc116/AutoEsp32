@@ -1,0 +1,27 @@
+=== Definicija
+
+=== Zašto
+
+=== Kako
+
+=== Prednosti
+
+=== Nedostaci
+
+=== ESP32
+
+==== Što
+
+==== Zašto
+
+==== Kako
+
+==== Usporedba s konkurencijom
+
+==== Specifičnosti
+
+===== UI
+
+===== Potrošnja
+
+===== API

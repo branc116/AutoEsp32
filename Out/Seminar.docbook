@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc maxdepth="5"?>
+<?asciidoc-numbered maxdepth="5"?>
+<article lang="en">
+<articleinfo>
+<title>Automatizacija sustava korištenjem ESP32 mikrokontrolera</title>
+<date>2018-03-18</date>
+<author>
+<firstname>Branimir</firstname>
+<surname>Ričko</surname>
+</author>
+<authorinitials>{</authorinitials>
+</articleinfo>
+<section id="_uvod">
+<title>Uvod</title>
+<literallayout class="monospaced">U ovom seminaru ćemo proučavati što je sve potrebno za uspiješnu automatizaciju nekog abstraknog sustava korištenjem ESP32 mikrokontrolera, a na kaju ćemo uzet neki realan sustav kao primijer.</literallayout>
+</section>
+<section id="_automatizacija">
+<title>Automatizacija</title>
+<section id="_definicija">
+<title>Definicija</title>
+
+</section>
+<section id="_zašto">
+<title>Zašto</title>
+
+</section>
+<section id="_kako">
+<title>Kako</title>
+
+</section>
+<section id="_prednosti">
+<title>Prednosti</title>
+
+</section>
+<section id="_nedostaci">
+<title>Nedostaci</title>
+
+</section>
+</section>
+<section id="_mikrokontroleri">
+<title>Mikrokontroleri</title>
+<section id="_definicija_2">
+<title>Definicija</title>
+
+</section>
+<section id="_zašto_2">
+<title>Zašto</title>
+
+</section>
+<section id="_kako_2">
+<title>Kako</title>
+
+</section>
+<section id="_prednosti_2">
+<title>Prednosti</title>
+
+</section>
+<section id="_nedostaci_2">
+<title>Nedostaci</title>
+
+</section>
+<section id="_esp32">
+<title>ESP32</title>
+<section id="_što">
+<title>Što</title>
+
+</section>
+<section id="_zašto_3">
+<title>Zašto</title>
+
+</section>
+<section id="_kako_3">
+<title>Kako</title>
+
+</section>
+<section id="_usporedba_s_konkurencijom">
+<title>Usporedba s konkurencijom</title>
+
+</section>
+<section id="_specifičnosti">
+<title>Specifičnosti</title>
+<section id="_ui">
+<title>UI</title>
+
+</section>
+<section id="_potrošnja">
+<title>Potrošnja</title>
+
+</section>
+<section id="_api">
+<title>API</title>
+
+</section>
+</section>
+</section>
+</section>
+<section id="_realizacija_sustava">
+<title>Realizacija sustava</title>
+<section id="_zahtijevi">
+<title>Zahtijevi</title>
+
+</section>
+<section id="_plan">
+<title>Plan</title>
+
+</section>
+<section id="_razrada">
+<title>Razrada</title>
+
+</section>
+<section id="_usporedba_s_konkurencijom_2">
+<title>Usporedba s konkurencijom</title>
+
+</section>
+</section>
+<section id="_zaključak">
+<title>Zaključak</title>
+
+</section>
+<section id="_literatura">
+<title>Literatura</title>
+<blockquote>
+<itemizedlist>
+<listitem>
+<simpara><ulink url="https://www.espressif.com/en/support/download/documents?keys=&amp;field_type_tid%5B%5D=13">Sva dokumentacija</ulink></simpara>
+</listitem>
+</itemizedlist>
+</blockquote>
+</section>
+<section id="_tl_dr">
+<title>TL;DR</title>
+
+</section>
+</article>

@@ -1,0 +1,39 @@
+:sectnums:
+:doctype: article
+:toc: left
+:toc-title: Sadržaj
+:toclevels: 5
+:firstname: Branimir
+:sectnumlevels: 5
+:lastname: Ričko
+:mail: branimir.ricko@fer.hr
+:Faks: Fakultet elektrotehnike i računarsktva
+:keywords: Automatizacija, ESP32, Mikrokontroleri
+:header: {Faks}
+:name: Automatizacija sustava korištenjem ESP32 mikrokontrolera
+:imagesdir: ./img
+
+= {name}
+{firstname} {lastname} | {mail} | {Faks} | {keywords}
+
+
+== Uvod
+include::Uvod.adoc[]
+
+== Automatizacija
+include::Automatizacija.adoc[]
+
+== Mikrokontroleri
+include::Mikrokontroleri.adoc[]
+
+== Realizacija sustava
+include::Sustav.adoc[]
+
+== Zaključak
+include::Zakljucak.adoc[]
+
+== Literatura
+include::Literatura.adoc[]
+
+== TL;DR
+include::TLDR.adoc[]
