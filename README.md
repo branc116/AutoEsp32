@@ -9,4 +9,4 @@ Seminar na temu Automatizacije sustava korištenjem ESP32 mikrolera
 
 ### Ovak nekak bi izgledalo sve skupa:
 
-![Plan/OkvirniIzgled.jpg]()
+![Okvirni izgled](Plan/OkvirniIzgled.jpg)
