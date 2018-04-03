@@ -12,6 +12,7 @@
 :header: {Faks}
 :name: Automatizacija sustava korištenjem ESP32 mikrokontrolera
 :imagesdir: ./img
+:figure-caption: Slika
 
 = {name}
 {firstname} {lastname} | {mail} | {Faks} | {keywords}

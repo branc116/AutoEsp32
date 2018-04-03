@@ -5,7 +5,7 @@
 <article lang="en">
 <articleinfo>
 <title>Automatizacija sustava korištenjem ESP32 mikrokontrolera</title>
-<date>2018-03-18</date>
+<date>2018-04-03</date>
 <author>
 <firstname>Branimir</firstname>
 <surname>Ričko</surname>
@@ -14,40 +14,78 @@
 </articleinfo>
 <section id="_uvod">
 <title>Uvod</title>
-<literallayout class="monospaced">U ovom seminaru ćemo proučavati što je sve potrebno za uspiješnu automatizaciju nekog abstraknog sustava korištenjem ESP32 mikrokontrolera, a na kaju ćemo uzet neki realan sustav kao primijer.</literallayout>
+<simpara>U ovom seminaru ćemo proučavati što je sve potrebno za uspiješnu automatizaciju nekog abstraknog sustava korištenjem ESP32 mikrokontrolera, a na kaju ćemo uzet neki realan sustav kao primijer.
+Postojanje ESP32 mikrontrolera dosta olakšava automatizaciju bolko kojeg sustava, zbog lakog programiranja, velik broj IO-a.
+Automatizacija sustava omogučuje lakše i jeftine upravljanje istim sustavom.</simpara>
 </section>
 <section id="_automatizacija">
 <title>Automatizacija</title>
 <section id="_definicija">
 <title>Definicija</title>
-
+<simpara>Automatizacija označava tijek prijenosa rada čovjeka na strojeve, obično kroz tehnički napredak.
+U industrijalizaciji nastavak je mehanizacije.</simpara>
+<simpara>Npr. Neki sustav koji zahtijeva brojenje nekih predmeta na nekoj mehaniziranoj traci.</simpara>
 </section>
 <section id="_zašto">
 <title>Zašto</title>
-
+<simpara>Sustav je dobro mehanizirati zbog nekoliko glavnih razloga:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Otklananje ljudskog faktora</simpara>
+</listitem>
+<listitem>
+<simpara>Lakša kompozicija sustava</simpara>
+</listitem>
+<listitem>
+<simpara>Veća priciznost dokumentacije sustava</simpara>
+</listitem>
+</itemizedlist>
 </section>
 <section id="_kako">
 <title>Kako</title>
-
+<simpara>Sustav prije nego je automatiziran, mora biti mehaniziran.
+Mehanizacija sustava podrazumijeva mijenjanje ljudske radne snage strojevima.
+Nakon mehanizacije, još uvijek mora postojati ljudski faktor koji upravlja strojevima.
+Automatizacijom otklanjamo i taj ljudski faktor tako što logiku cijelog sustava enkapsuliramo i prilagodimo za izvođenje na nekom mikrokontroleru.</simpara>
 </section>
 <section id="_prednosti">
 <title>Prednosti</title>
-
+<itemizedlist>
+<listitem>
+<simpara>Otklananje ljudskog faktora</simpara>
+</listitem>
+<listitem>
+<simpara>Lakša kompozicija sustava</simpara>
+</listitem>
+<listitem>
+<simpara>Veća priciznost dokumentacije sustava</simpara>
+</listitem>
+</itemizedlist>
 </section>
 <section id="_nedostaci">
 <title>Nedostaci</title>
-
+<itemizedlist>
+<listitem>
+<simpara>Ljudi koji rade na sustavu prije automatizacije gube posao</simpara>
+</listitem>
+<listitem>
+<simpara>Velika inicijalna cijena</simpara>
+</listitem>
+<listitem>
+<simpara>Ovisnost o firmi koja je automatizirala sustav</simpara>
+</listitem>
+</itemizedlist>
 </section>
 </section>
 <section id="_mikrokontroleri">
 <title>Mikrokontroleri</title>
 <section id="_definicija_2">
 <title>Definicija</title>
-
+<simpara>Mikrokontroler je skup integriarnih krugova koji su ukomponirani na takav način da mogu funkcionirati kao mala računala, najčašće se programira kako bi izvršavao neku specifičnu zadaću.</simpara>
 </section>
 <section id="_zašto_2">
 <title>Zašto</title>
-
+<simpara>Mikrokontroleri se koriste kad je protreno izvršavati neku specifičnu zadaću koja je dovoljno komplesna da je izrada integriranog sklopa pre komplicirana, a opet nije toliko kompleksna da je potrebno računalo.</simpara>
 </section>
 <section id="_kako_2">
 <title>Kako</title>
@@ -55,21 +93,50 @@
 </section>
 <section id="_prednosti_2">
 <title>Prednosti</title>
-
+<itemizedlist>
+<listitem>
+<simpara>Niska cijena</simpara>
+</listitem>
+<listitem>
+<simpara>Male dimenzije</simpara>
+</listitem>
+<listitem>
+<simpara>Niska potrošnja (1W-2W)</simpara>
+</listitem>
+<listitem>
+<simpara>Relativno velika procesna moć</simpara>
+</listitem>
+</itemizedlist>
 </section>
 <section id="_nedostaci_2">
 <title>Nedostaci</title>
-
+<itemizedlist>
+<listitem>
+<simpara>Ponekad je api napisan na nelogičan način</simpara>
+</listitem>
+<listitem>
+<simpara>Relativno mala procesna moć u usporedbi s računalon</simpara>
+</listitem>
+<listitem>
+<simpara>Relativno velika potrošnja ukoliko ne koristimo svi procesnu moć</simpara>
+</listitem>
+</itemizedlist>
 </section>
 <section id="_esp32">
 <title>ESP32</title>
-<section id="_što">
-<title>Što</title>
-
-</section>
+<figure>
+<title>ESP32</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./img/ESP32.jpg" align="center"/>
+</imageobject>
+<textobject><phrase>ESP32</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>ESP32 je mikrokontroler sa integriranim Wi-Fi i bluetooth posdsustavom.</simpara>
 <section id="_zašto_3">
 <title>Zašto</title>
-
+<simpara>ESP32 je</simpara>
 </section>
 <section id="_kako_3">
 <title>Kako</title>
@@ -77,22 +144,168 @@
 </section>
 <section id="_usporedba_s_konkurencijom">
 <title>Usporedba s konkurencijom</title>
-
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="4">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="25*"/>
+<colspec colname="col_3" colwidth="25*"/>
+<colspec colname="col_4" colwidth="25*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"></entry>
+<entry align="left" valign="top"><simpara>ESP32</simpara></entry>
+<entry align="left" valign="top"><simpara>ESP8266</simpara></entry>
+<entry align="left" valign="top"><simpara>Arduino</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Napon napajanja</simpara></entry>
+<entry align="left" valign="top"><simpara>3.3v</simpara></entry>
+<entry align="left" valign="top"><simpara>3.3v</simpara></entry>
+<entry align="left" valign="top"><simpara>5.0v</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Struja napajanja</simpara></entry>
+<entry align="left" valign="top"><simpara>5 μA - 200 mA</simpara></entry>
+<entry align="left" valign="top"><simpara>100mA</simpara></entry>
+<entry align="left" valign="top"><simpara>100mA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>IO</simpara></entry>
+<entry align="left" valign="top"><simpara>I²C, Spi, Wi-fi, Bluetooth, Ethernet, GPIO, PWM, UART, Senzor za temperaturu</simpara></entry>
+<entry align="left" valign="top"><simpara>I²C, Spi, Wi-fi, GPIO, PWM, UART</simpara></entry>
+<entry align="left" valign="top"><simpara>I²C, Spi, GPIO, PWM, UART</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Procesor</simpara></entry>
+<entry align="left" valign="top"><simpara>Xtensa dual-core 32-bit LX6 microprocessor (240 MHz)</simpara></entry>
+<entry align="left" valign="top"><simpara>Xtensa Diamond Standard 106Micro (80 MHz)</simpara></entry>
+<entry align="left" valign="top"><simpara>Atmel 8-bit AVR (16 MHz)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Memorija</simpara></entry>
+<entry align="left" valign="top"><simpara>520 KiB SRAM</simpara></entry>
+<entry align="left" valign="top"><simpara>128Kib</simpara></entry>
+<entry align="left" valign="top"><simpara>2KiB - 8Kib</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Flash</simpara></entry>
+<entry align="left" valign="top"><simpara>16 MiB</simpara></entry>
+<entry align="left" valign="top"><simpara>16 MiB</simpara></entry>
+<entry align="left" valign="top"><simpara>256KiB</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>SDK</simpara></entry>
+<entry align="left" valign="top"><simpara>Espressif IoT Development Framework, Espruino, Lua RTOS for ESP32, Mongoose OS, mruby, MicroPython</simpara></entry>
+<entry align="left" valign="top"><simpara>NodeMCU, ESP-Open-SDK, ESP-Open-RTOS, Mongoose OS, MicroPython</simpara></entry>
+<entry align="left" valign="top"><simpara>Arduino, OpenWRT</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
 </section>
 <section id="_specifičnosti">
 <title>Specifičnosti</title>
+<itemizedlist>
+<listitem>
+<simpara>Wi-Fi</simpara>
+</listitem>
+<listitem>
+<simpara>Bluetooth</simpara>
+</listitem>
+<listitem>
+<simpara>Ultra low power mode (15 μW)</simpara>
+</listitem>
+<listitem>
+<simpara>Hardverski implemetirano AES, SHA-2, RSA, ECC, RNG</simpara>
+</listitem>
+<listitem>
+<simpara>Temperature sensor</simpara>
+</listitem>
+<listitem>
+<simpara>Hall efeket senzor</simpara>
+</listitem>
+<listitem>
+<simpara>Analogno predpojačalo</simpara>
+</listitem>
+</itemizedlist>
+</section>
 <section id="_ui">
 <title>UI</title>
-
+<itemizedlist>
+<listitem>
+<simpara>12-bit SAR ADC</simpara>
+</listitem>
+<listitem>
+<simpara>2 × 8-bit DACs</simpara>
+</listitem>
+<listitem>
+<simpara>10 × GPIOs</simpara>
+</listitem>
+<listitem>
+<simpara>4 × SPI</simpara>
+</listitem>
+<listitem>
+<simpara>2 × I²S</simpara>
+</listitem>
+<listitem>
+<simpara>2 × I²C</simpara>
+</listitem>
+<listitem>
+<simpara>3 × UART</simpara>
+</listitem>
+<listitem>
+<simpara>SD/SDIO/CE-ATA/MMC/eMMC</simpara>
+</listitem>
+<listitem>
+<simpara>SDIO/SPI</simpara>
+</listitem>
+<listitem>
+<simpara>Ethernet</simpara>
+</listitem>
+<listitem>
+<simpara>CAN bus 2.0</simpara>
+</listitem>
+<listitem>
+<simpara>PWM</simpara>
+</listitem>
+</itemizedlist>
 </section>
 <section id="_potrošnja">
 <title>Potrošnja</title>
-
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Wi-Fi slanje</simpara></entry>
+<entry align="left" valign="top"><simpara>240 mA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Wi-Fi primanje</simpara></entry>
+<entry align="left" valign="top"><simpara>100 mA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>240Mhz</simpara></entry>
+<entry align="left" valign="top"><simpara>30 mA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>2MHz</simpara></entry>
+<entry align="left" valign="top"><simpara>2 mA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Ultra low power</simpara></entry>
+<entry align="left" valign="top"><simpara>5 μA - 150 μA</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
 </section>
 <section id="_api">
 <title>API</title>
-
-</section>
+<simpara>Postoji nekoliko načina programiranja za ESP32.
+Orginalni API za glavni procesor je napisan u c-u, dok je api za ULP suprocesor napisan u assembleru.</simpara>
+<simpara>Postoje i implementacije api-a u višim programskim jezicima. Te implementacije mogu biti dosta sporije, no jako olakšavaju programiranje.</simpara>
 </section>
 </section>
 </section>

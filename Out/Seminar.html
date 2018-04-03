@@ -455,17 +455,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_nedostaci_2">3.5. Nedostaci</a></li>
 <li><a href="#_esp32">3.6. ESP32</a>
 <ul class="sectlevel3">
-<li><a href="#_što">3.6.1. Što</a></li>
-<li><a href="#_zašto_3">3.6.2. Zašto</a></li>
-<li><a href="#_kako_3">3.6.3. Kako</a></li>
-<li><a href="#_usporedba_s_konkurencijom">3.6.4. Usporedba s konkurencijom</a></li>
-<li><a href="#_specifičnosti">3.6.5. Specifičnosti</a>
-<ul class="sectlevel4">
-<li><a href="#_ui">3.6.5.1. UI</a></li>
-<li><a href="#_potrošnja">3.6.5.2. Potrošnja</a></li>
-<li><a href="#_api">3.6.5.3. API</a></li>
-</ul>
-</li>
+<li><a href="#_zašto_3">3.6.1. Zašto</a></li>
+<li><a href="#_kako_3">3.6.2. Kako</a></li>
+<li><a href="#_usporedba_s_konkurencijom">3.6.3. Usporedba s konkurencijom</a></li>
+<li><a href="#_specifičnosti">3.6.4. Specifičnosti</a></li>
+<li><a href="#_ui">3.6.5. UI</a></li>
+<li><a href="#_potrošnja">3.6.6. Potrošnja</a></li>
+<li><a href="#_api">3.6.7. API</a></li>
 </ul>
 </li>
 </ul>
@@ -488,10 +484,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_uvod">1. Uvod</h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>U ovom seminaru ćemo proučavati što je sve potrebno za uspiješnu automatizaciju nekog abstraknog sustava korištenjem ESP32 mikrokontrolera, a na kaju ćemo uzet neki realan sustav kao primijer.</pre>
-</div>
+<div class="paragraph">
+<p>U ovom seminaru ćemo proučavati što je sve potrebno za uspiješnu automatizaciju nekog abstraknog sustava korištenjem ESP32 mikrokontrolera, a na kaju ćemo uzet neki realan sustav kao primijer.
+Postojanje ESP32 mikrontrolera dosta olakšava automatizaciju bolko kojeg sustava, zbog lakog programiranja, velik broj IO-a.
+Automatizacija sustava omogučuje lakše i jeftine upravljanje istim sustavom.</p>
 </div>
 </div>
 </div>
@@ -500,23 +496,73 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_definicija">2.1. Definicija</h3>
-
+<div class="paragraph">
+<p>Automatizacija označava tijek prijenosa rada čovjeka na strojeve, obično kroz tehnički napredak.
+U industrijalizaciji nastavak je mehanizacije.</p>
+</div>
+<div class="paragraph">
+<p>Npr. Neki sustav koji zahtijeva brojenje nekih predmeta na nekoj mehaniziranoj traci.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_zašto">2.2. Zašto</h3>
-
+<div class="paragraph">
+<p>Sustav je dobro mehanizirati zbog nekoliko glavnih razloga:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Otklananje ljudskog faktora</p>
+</li>
+<li>
+<p>Lakša kompozicija sustava</p>
+</li>
+<li>
+<p>Veća priciznost dokumentacije sustava</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_kako">2.3. Kako</h3>
-
+<div class="paragraph">
+<p>Sustav prije nego je automatiziran, mora biti mehaniziran.
+Mehanizacija sustava podrazumijeva mijenjanje ljudske radne snage strojevima.
+Nakon mehanizacije, još uvijek mora postojati ljudski faktor koji upravlja strojevima.
+Automatizacijom otklanjamo i taj ljudski faktor tako što logiku cijelog sustava enkapsuliramo i prilagodimo za izvođenje na nekom mikrokontroleru.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_prednosti">2.4. Prednosti</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Otklananje ljudskog faktora</p>
+</li>
+<li>
+<p>Lakša kompozicija sustava</p>
+</li>
+<li>
+<p>Veća priciznost dokumentacije sustava</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_nedostaci">2.5. Nedostaci</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Ljudi koji rade na sustavu prije automatizacije gube posao</p>
+</li>
+<li>
+<p>Velika inicijalna cijena</p>
+</li>
+<li>
+<p>Ovisnost o firmi koja je automatizirala sustav</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -525,11 +571,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_definicija_2">3.1. Definicija</h3>
-
+<div class="paragraph">
+<p>Mikrokontroler je skup integriarnih krugova koji su ukomponirani na takav način da mogu funkcionirati kao mala računala, najčašće se programira kako bi izvršavao neku specifičnu zadaću.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_zašto_2">3.2. Zašto</h3>
-
+<div class="paragraph">
+<p>Mikrokontroleri se koriste kad je protreno izvršavati neku specifičnu zadaću koja je dovoljno komplesna da je izrada integriranog sklopa pre komplicirana, a opet nije toliko kompleksna da je potrebno računalo.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_kako_2">3.3. Kako</h3>
@@ -537,43 +587,231 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_prednosti_2">3.4. Prednosti</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Niska cijena</p>
+</li>
+<li>
+<p>Male dimenzije</p>
+</li>
+<li>
+<p>Niska potrošnja (1W-2W)</p>
+</li>
+<li>
+<p>Relativno velika procesna moć</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_nedostaci_2">3.5. Nedostaci</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Ponekad je api napisan na nelogičan način</p>
+</li>
+<li>
+<p>Relativno mala procesna moć u usporedbi s računalon</p>
+</li>
+<li>
+<p>Relativno velika potrošnja ukoliko ne koristimo svi procesnu moć</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_esp32">3.6. ESP32</h3>
-<div class="sect3">
-<h4 id="_što">3.6.1. Što</h4>
-
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="./img/ESP32.jpg" alt="ESP32">
+</div>
+<div class="title">Slika 1. ESP32</div>
+</div>
+<div class="paragraph">
+<p>ESP32 je mikrokontroler sa integriranim Wi-Fi i bluetooth posdsustavom.</p>
 </div>
 <div class="sect3">
-<h4 id="_zašto_3">3.6.2. Zašto</h4>
+<h4 id="_zašto_3">3.6.1. Zašto</h4>
+<div class="paragraph">
+<p>ESP32 je</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kako_3">3.6.2. Kako</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_kako_3">3.6.3. Kako</h4>
-
+<h4 id="_usporedba_s_konkurencijom">3.6.3. Usporedba s konkurencijom</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESP32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESP8266</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arduino</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Napon napajanja</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3v</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3v</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0v</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Struja napajanja</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 μA - 200 mA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100mA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100mA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I²C, Spi, Wi-fi, Bluetooth, Ethernet, GPIO, PWM, UART, Senzor za temperaturu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I²C, Spi, Wi-fi, GPIO, PWM, UART</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I²C, Spi, GPIO, PWM, UART</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Procesor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xtensa dual-core 32-bit LX6 microprocessor (240 MHz)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Xtensa Diamond Standard 106Micro (80 MHz)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Atmel 8-bit AVR (16 MHz)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Memorija</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">520 KiB SRAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128Kib</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2KiB - 8Kib</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flash</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 MiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 MiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256KiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SDK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Espressif IoT Development Framework, Espruino, Lua RTOS for ESP32, Mongoose OS, mruby, MicroPython</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NodeMCU, ESP-Open-SDK, ESP-Open-RTOS, Mongoose OS, MicroPython</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arduino, OpenWRT</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
-<h4 id="_usporedba_s_konkurencijom">3.6.4. Usporedba s konkurencijom</h4>
-
+<h4 id="_specifičnosti">3.6.4. Specifičnosti</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Wi-Fi</p>
+</li>
+<li>
+<p>Bluetooth</p>
+</li>
+<li>
+<p>Ultra low power mode (15 μW)</p>
+</li>
+<li>
+<p>Hardverski implemetirano AES, SHA-2, RSA, ECC, RNG</p>
+</li>
+<li>
+<p>Temperature sensor</p>
+</li>
+<li>
+<p>Hall efeket senzor</p>
+</li>
+<li>
+<p>Analogno predpojačalo</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_specifičnosti">3.6.5. Specifičnosti</h4>
-<div class="sect4">
-<h5 id="_ui">3.6.5.1. UI</h5>
-
+<h4 id="_ui">3.6.5. UI</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>12-bit SAR ADC</p>
+</li>
+<li>
+<p>2 × 8-bit DACs</p>
+</li>
+<li>
+<p>10 × GPIOs</p>
+</li>
+<li>
+<p>4 × SPI</p>
+</li>
+<li>
+<p>2 × I²S</p>
+</li>
+<li>
+<p>2 × I²C</p>
+</li>
+<li>
+<p>3 × UART</p>
+</li>
+<li>
+<p>SD/SDIO/CE-ATA/MMC/eMMC</p>
+</li>
+<li>
+<p>SDIO/SPI</p>
+</li>
+<li>
+<p>Ethernet</p>
+</li>
+<li>
+<p>CAN bus 2.0</p>
+</li>
+<li>
+<p>PWM</p>
+</li>
+</ul>
 </div>
-<div class="sect4">
-<h5 id="_potrošnja">3.6.5.2. Potrošnja</h5>
-
 </div>
-<div class="sect4">
-<h5 id="_api">3.6.5.3. API</h5>
-
+<div class="sect3">
+<h4 id="_potrošnja">3.6.6. Potrošnja</h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi slanje</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240 mA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi primanje</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100 mA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240Mhz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30 mA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2MHz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 mA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ultra low power</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 μA - 150 μA</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_api">3.6.7. API</h4>
+<div class="paragraph">
+<p>Postoji nekoliko načina programiranja za ESP32.
+Orginalni API za glavni procesor je napisan u c-u, dok je api za ULP suprocesor napisan u assembleru.</p>
+</div>
+<div class="paragraph">
+<p>Postoje i implementacije api-a u višim programskim jezicima. Te implementacije mogu biti dosta sporije, no jako olakšavaju programiranje.</p>
 </div>
 </div>
 </div>
@@ -631,7 +869,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-18 17:46:53 Central European Standard Time
+Last updated 2018-04-03 20:58:19 Central European Daylight Time
 </div>
 </div>
 </body>

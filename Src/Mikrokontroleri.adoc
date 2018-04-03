@@ -1,27 +1,85 @@
 === Definicija
+Mikrokontroler je skup integriarnih krugova koji su ukomponirani na takav način da mogu funkcionirati kao mala računala, najčašće se programira kako bi izvršavao neku specifičnu zadaću.
 
 === Zašto
 
+Mikrokontroleri se koriste kad je protreno izvršavati neku specifičnu zadaću koja je dovoljno komplesna da je izrada integriranog sklopa pre komplicirana, a opet nije toliko kompleksna da je potrebno računalo.
+
 === Kako
+
+
 
 === Prednosti
 
+* Niska cijena
+* Male dimenzije
+* Niska potrošnja (1W-2W)
+* Relativno velika procesna moć
+
 === Nedostaci
 
-=== ESP32
+* Ponekad je api napisan na nelogičan način
+* Relativno mala procesna moć u usporedbi s računalon
+* Relativno velika potrošnja ukoliko ne koristimo svi procesnu moć
 
-==== Što
+=== ESP32
+.ESP32
+image::ESP32.jpg[title="ESP32", align="center"]
+
+ESP32 je mikrokontroler sa integriranim Wi-Fi i bluetooth posdsustavom.
 
 ==== Zašto
+ESP32 je 
 
 ==== Kako
 
 ==== Usporedba s konkurencijom
-
+|===
+||ESP32|ESP8266|Arduino
+|Napon napajanja|3.3v|3.3v|5.0v
+|Struja napajanja|5 μA - 200 mA| 100mA|100mA
+|IO|I²C, Spi, Wi-fi, Bluetooth, Ethernet, GPIO, PWM, UART, Senzor za temperaturu | I²C, Spi, Wi-fi, GPIO, PWM, UART |I²C, Spi, GPIO, PWM, UART
+|Procesor|Xtensa dual-core 32-bit LX6 microprocessor (240 MHz) | Xtensa Diamond Standard 106Micro (80 MHz)| Atmel 8-bit AVR (16 MHz)
+|Memorija|520 KiB SRAM|128Kib|2KiB - 8Kib
+|Flash|16 MiB|16 MiB|256KiB
+|SDK|Espressif IoT Development Framework, Espruino, Lua RTOS for ESP32, Mongoose OS, mruby, MicroPython | NodeMCU, ESP-Open-SDK, ESP-Open-RTOS, Mongoose OS, MicroPython | Arduino, OpenWRT
+|===
 ==== Specifičnosti
+* Wi-Fi
+* Bluetooth
+* Ultra low power mode (15 μW)
+* Hardverski implemetirano AES, SHA-2, RSA, ECC, RNG
+* Temperature sensor
+* Hall efeket senzor
+* Analogno predpojačalo
 
-===== UI
+==== UI
+* 12-bit SAR ADC
+* 2 × 8-bit DACs
+* 10 × GPIOs
+* 4 × SPI
+* 2 × I²S
+* 2 × I²C
+* 3 × UART
+* SD/SDIO/CE-ATA/MMC/eMMC
+* SDIO/SPI
+* Ethernet 
+* CAN bus 2.0
+* PWM
 
-===== Potrošnja
+==== Potrošnja
 
-===== API
+|===
+|Wi-Fi slanje|240 mA
+|Wi-Fi primanje|100 mA
+|240Mhz|30 mA
+|2MHz|2 mA
+|Ultra low power|5 μA - 150 μA
+|===
+
+==== API
+
+Postoji nekoliko načina programiranja za ESP32.
+Orginalni API za glavni procesor je napisan u c-u, dok je api za ULP suprocesor napisan u assembleru.
+
+Postoje i implementacije api-a u višim programskim jezicima. Te implementacije mogu biti dosta sporije, no jako olakšavaju programiranje.

@@ -1,9 +1,32 @@
 === Definicija
+Automatizacija označava tijek prijenosa rada čovjeka na strojeve, obično kroz tehnički napredak. 
+U industrijalizaciji nastavak je mehanizacije. 
+
+Npr. Neki sustav koji zahtijeva brojenje nekih predmeta na nekoj mehaniziranoj traci.
+
 
 === Zašto
+Sustav je dobro mehanizirati zbog nekoliko glavnih razloga:
+
+* Otklananje ljudskog faktora
+* Lakša kompozicija sustava
+* Veća priciznost dokumentacije sustava
 
 === Kako
+Sustav prije nego je automatiziran, mora biti mehaniziran.
+Mehanizacija sustava podrazumijeva mijenjanje ljudske radne snage strojevima.
+Nakon mehanizacije, još uvijek mora postojati ljudski faktor koji upravlja strojevima.
+Automatizacijom otklanjamo i taj ljudski faktor tako što logiku cijelog sustava enkapsuliramo i prilagodimo za izvođenje na nekom mikrokontroleru.
+
 
 === Prednosti
 
+* Otklananje ljudskog faktora
+* Lakša kompozicija sustava
+* Veća priciznost dokumentacije sustava
+
 === Nedostaci
+
+* Ljudi koji rade na sustavu prije automatizacije gube posao
+* Velika inicijalna cijena
+* Ovisnost o firmi koja je automatizirala sustav

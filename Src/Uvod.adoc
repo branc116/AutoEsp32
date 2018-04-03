@@ -1,5 +1,3 @@
-
-....
 U ovom seminaru ćemo proučavati što je sve potrebno za uspiješnu automatizaciju nekog abstraknog sustava korištenjem ESP32 mikrokontrolera, a na kaju ćemo uzet neki realan sustav kao primijer.
-....
- 
+Postojanje ESP32 mikrontrolera dosta olakšava automatizaciju bolko kojeg sustava, zbog lakog programiranja, velik broj IO-a.
+Automatizacija sustava omogučuje lakše i jeftine upravljanje istim sustavom.
